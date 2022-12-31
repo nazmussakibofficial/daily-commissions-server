@@ -85,7 +85,7 @@ async function run() {
 
         app.get('/recent', async (req, res) => {
             const query = {};
-            const artworks = await artworksCollection.find(query).limit(3).sort({ "date": -1 }).toArray();
+            const artworks = await artworksCollection.find(query).limit(4).sort({ "date": -1 }).toArray();
             res.send(artworks);
         });
 
