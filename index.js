@@ -41,7 +41,7 @@ async function run() {
             res.send(artists);
         });
 
-        app.get('/user', async (req, res) => {
+        app.get('/users', async (req, res) => {
             const email = req.query.email;
             const query = { email };
             const user = await usersCollection.find(query).toArray();
